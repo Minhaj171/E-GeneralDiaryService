@@ -1,0 +1,134 @@
+.loginbox{
+    margin:0;
+    padding:0;
+    background-size:cover;
+    background: url(hotel.jpg);
+    background position: center;
+    font-family:sans-serif;
+}
+.loginbox{     
+    width:250px
+    height:320px;    
+    background:#d9d9d9;
+    color: #fff;
+    top:0px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,50%);
+    box-sizing: border-box; 
+    padding: 70px 30px;
+    
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position:absolute;
+    top:-50px;
+    left:calc(50% - 50px);
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 28px;
+    text-align: center;
+    color: #ff3333;
+    font-size: 22px;   
+}
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    color:  #ff8080;
+    font-weight: bold;
+}
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.loginbox input[type-"text"],input[type-"password"]{
+    border: none;
+    border -bottom:1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 1Gpx;
+}
+.loginbox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color:#fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color:#000;
+}
+.loginbox a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color:darkgrey;
+}
+.adminlogP1{
+ width: 250px
+    height:320px;
+    background: #000;
+    color: #fff;
+    top:58%;
+    left: 50%;
+    position: 
+    transform: translate(-50%,50%);
+    box-sizing: border-box; 
+    padding: 10px 220px;
+    background position: center;
+}
+
+.signupbox{
+    width:250px
+    height:420px;    
+    background:#333333;
+    color: #fff;
+    top:0px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,50%);
+    box-sizing: border-box; 
+    padding: 70px 30px;
+}
+ #textbox1{
+    width: 160px;
+     border-radius: 20px;    
+}
+#textbox2{
+    width: 130px;
+     border-radius: 20px;    
+}
+#textbox3{
+    width: 152px;
+     border-radius: 20px;    
+}
+#textbox4{
+    width: 135px;
+     border-radius: 20px;    
+}
+#btnsubmit{
+      width: 135px;
+     border-radius: 20px;
+    position: absolute;
+    top: 250px;
+    right: 60; 
+}
+#btnsubmit:hover{
+ cursor: pointer;
+    background: #ff3333;
+    color:#000;
+}
+
+  
