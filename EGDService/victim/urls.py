@@ -4,5 +4,5 @@ from .import views
 urlpatterns = [
     path('', views.showvictim, name='victimlist'),
     path('login/', views.loginPage, name='loginPage')
-
+test2
 ]
