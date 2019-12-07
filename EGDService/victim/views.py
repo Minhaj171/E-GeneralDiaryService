@@ -5,6 +5,8 @@ from django.shortcuts import render
 
 def showvictim(request):
     return render(request, "index.html")
+def abc(request):
+    return request
+
 def loginPage(request):
     return render(request, "login.html")
-
