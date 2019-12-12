@@ -8,3 +8,5 @@ def showvictim(request):
 
 def loginPage(request):
     return render(request, "login.html")
+def userPage(request):
+    return render(request, "user_dashboard.html")
