@@ -1,4 +1,6 @@
 from django.contrib import admin
-from .models import PoliceVerification
+
 # Register your models here.
+from .models import PoliceVerification
+
 admin.site.register(PoliceVerification)

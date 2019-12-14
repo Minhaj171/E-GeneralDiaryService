@@ -57,7 +57,12 @@ ROOT_URLCONF = 'EGDService.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'victim/templates')],
+
+        'DIRS': [
+            os.path.join(BASE_DIR, 'victim/templates'),
+            os.path.join(BASE_DIR, 'tourist/templates'),
+        ],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,7 +74,7 @@ TEMPLATES = [
         },
     },
 ]
-STATIC_DIR = os.path.join(BASE_DIR,"static")
+STATIC_DIR = os.path.join(BASE_DIR, "static")
 
 WSGI_APPLICATION = 'EGDService.wsgi.application'
 

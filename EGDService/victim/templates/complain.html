@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> </title>
+  <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="Reservation.css" type="text/css" rel="Stylesheet">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-</head>
-<body>
+{% block content %}
 <div>
-  <form action="complain.html" method="POST">
+  <form action= "{% url 'userComplain' %}" method="POST">
+      {% csrf_token %}
+        <div class="form-group">
+    <label for="id">Complainant id:</label>
+    <input type="text" class="form-control" name="Complain_id"  placeholder="Insert Id">
+  </div>
     <div class="form-group">
-    <label for="Name"> Select Types:</label>
+    <label for="Complain_type"> Select Types:</label>
     <select class="form-control" id="complaint_type" name="Complaint_type">
     <option>Complaint</option>
     <option>Opinion</option> 
@@ -29,13 +31,10 @@
     <label for="Mobile">Mobile No:</label>
     <input type="Text" class="form-control" name="mobile"  placeholder="Insert Mobile Number">
   </div>
-  <div class="form-group">
-    <label for="email">Email address:</label>
-    <input type="email" class="form-control" name="email"  placeholder="Insert email">
-  </div>
+
     <div class="form-group">
        <label for="National_id">Select Identity Card:</label>
-     <select name="identityid" onchange='CheckColors(this.value);'> 
+     <select name="identity_id" onchange='CheckColors(this.value);'>
     <option>select id</option>  
     <option value="N_id">National id</option>
     <option value="P_id">Passport id</option>
@@ -45,14 +44,9 @@
 <input type="text" name="identityid" class="form-control" id="identityid" style='display:none;'/>
 </div>
 
-    <div class="form-group">
-  <label>Select Gender</label>
-    <input  type="radio" name="gender" value="Male">Male   
-    <input type="radio" name="gender" value="Female">Female    
-</div>
 <div class="form-group">
   <label>Select District</label>
-  <select id="select-state" placeholder="Pick a District">
+  <select id="select-state" name="District" placeholder="Pick a District">
     <option value="">Select a District</option>
     <option value="AL">Alabama</option>
     <option value="AK">Alaska</option>
@@ -72,12 +66,16 @@
 
 <div class="form-group">
     <label for="Complain">Your complain</label>
-    <textarea class="form-control" name="Ycomplain" style='margin: 15px; width: 200px; height: 50px'></textarea> 
+    <textarea class="form-control" name="Y_complain" style='margin: 15px; width: 200px; height: 50px'></textarea>
   </div>
-
+<div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" name="email"  placeholder="Insert email">
+  </div>
  <button type="submit" class="btn btn-default" name="submit" value="submit" >Submit</button>                                                                     
 </form>
 </div>
+{%endblock%}
 </body>
 </html>
 
