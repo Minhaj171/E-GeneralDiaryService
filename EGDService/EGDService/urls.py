@@ -20,4 +20,6 @@ urlpatterns = [
     path('', include('victim.urls')),
     path('admin/', admin.site.urls),
     path('tourist/', include('tourist.urls')),
+    path('policeOfficer/', include('policeOfficer.urls')),
+    path('Addmin/', include('Addmin.urls')),
 ]
