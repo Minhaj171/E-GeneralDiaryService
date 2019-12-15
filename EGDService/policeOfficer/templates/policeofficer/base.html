@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
 * {box-sizing: border-box;}
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -12,7 +12,7 @@ body {
 
 #navbar {
   overflow: hidden;
-  background-color: #00FF33;
+  background-color: #0033FF;
   padding: 90px 10px;
   transition: 0.4s;
   position: fixed;
@@ -143,39 +143,10 @@ display: inline-block;
   margin: 10px;
 }
 </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-
-<div id="navbar">
-  <a href="#default" id="logo">Police.BD</a>
-  <div class="ladmin">
-    <label>Police Dashboard</label>
-  </div>
-  <div id="navbar-right">
-    <a href="#about">logout</a>
-  </div>
-</div>
-
-<div style="margin-top:180px;padding:25px 5px 2500px 1px;font-size:30px">
-<button class="button" onclick="window.location.href='tourist/crime.html'" style="vertical-align:middle"><span>Crime Report</span></button>
-    <button class="view_v" onclick="window.location.href='tourist/verification_requests.html'" style="vertical-align:middle"><span>Verification request</span></button>
-<button class="view_i" onclick="window.location.href='/inbox.html'" style="vertical-align:middle"><span>inbox</span></button>
-</div>
-
-<script>
-// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navbar").style.padding = "30px 10px";
-    document.getElementById("logo").style.fontSize = "25px";
-  } else {
-    document.getElementById("navbar").style.padding = "80px 10px";
-    document.getElementById("logo").style.fontSize = "35px";
-  }
-}
-</script>
-
+{% block content %}
+{% endblock content %}
 </body>
 </html>

@@ -1,22 +1,20 @@
-{% extends 'administrator/base.html' %}
+{% extends 'policeofficer/base.html' %}
 {% block content %}
 <div id="navbar">
   <a href="#default" id="logo">Police.BD</a>
-  <div class="ladmin">
-    <label>Admin</label>
-  </div>
+<div id="navbar-center">
+  <a href="#default">Bangladesh Police</a>
+</div>
   <div id="navbar-right">
-    <a class="active" href="#home">Home</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a href="#about">logout</a>
   </div>
 </div>
 
-<div style="margin-top:280px;padding:25px 5px 2500px 1px;font-size:30px">
-  <a class="btn btn-sm btn-primary" href="showComplain/" style="vertical-align:middle">Complains</a>
-  <a class="btn btn-sm btn-primary" href="ShowVerification/" style="vertical-align:middle">Verifications requests</a>
+<div style="margin-top:180px;padding:25px 5px 2500px 1px;font-size:30px">
+<a class="btn btn-sm btn-primary" href="ShowCrimes/" style="vertical-align:middle">Complains</a>
+  <a class="btn btn-sm btn-primary" href="Show_ver_requests/" style="vertical-align:middle">Verifications requests</a>
 </div>
-
+<a href="crime.html">View Crimes</a>
 <script>
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 window.onscroll = function() {scrollFunction()};
@@ -32,4 +30,3 @@ function scrollFunction() {
 }
 </script>
 {% endblock content %}
-

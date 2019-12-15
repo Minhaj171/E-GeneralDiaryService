@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-ddddddd
-</body>
-</html>
+{% extends 'administrator/base.html' %}
+{% block content %}
+    <div class="container">
+        <table class="table table-striped">
+    {% csrf_token %}
+       <thead>
+           <th> Tourist Id</th>
+           <th> Name</th>
+           <th> Country</th>
+           <th> Mobile</th>
+           <th> Email address:</th>
+           <th> Staying Duration</th>
+           <th> Passport id</th>
+       </thead>
+
+        <tbody>
+         {% for p in verificationlist %}
+             <tr>
+            <td>{{p.Verification_id}}</td>
+            <td>{{p.Tourist_name}}</td>
+            <td>{{p.C_tourist}}</td>
+            <td>{{p.Tourist_M}}</td>
+            <td>{{p.Tourist_Email}}</td>
+            <td>{{p.Tourist_duration}}</td>
+            <td>{{p.Passport_id}}</td>
+             </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+{% endblock %}
