@@ -1,0 +1,48 @@
+body {
+  font: 20px "Montserrat", sans-serif;
+  line-height: 1.8;
+  color: #f5f6f7;
+}
+
+p {
+    font-size: 16px;
+}
+.margin {
+    margin-bottom: 45px;
+}
+.bg-1{
+    background-color: #ffffff;
+    color: #474e5d;
+}
+.bg-2{
+     background-color: #ffffff;
+  color: #000;
+}
+.container_concert{
+    padding-bottom: 20px;
+}
+.container_concert a:link, a:visited{
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container_concert a:hover, a:active{
+    background-color: red;
+}
+
+.navbar{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav li a:hover{
+    color: #1abc9c !important;
+}

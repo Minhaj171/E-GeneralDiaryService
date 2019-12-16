@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'policeOfficer',
     'tourist',
     'victim',
+    'login',
 ]
 
 MIDDLEWARE = [

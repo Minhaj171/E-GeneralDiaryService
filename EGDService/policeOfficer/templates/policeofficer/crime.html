@@ -1,9 +1,37 @@
 {% extends 'policeofficer/base.html' %}
 {% block content %}
-<div id="navbar">
-  <a href="#default" id="logo">Police.BD</a>
-  <div id="navbar-right">
-    <a href="Show_officer_Dash/">Back</a>
-  </div>
-</div>
+
+<div class="mb-5"></div>
+ <table class="table table-striped">
+    {% csrf_token %}
+       <thead>
+           <th> Complainant id</th>
+           <th> Select Types</th>
+           <th> Complainant Name</th>
+           <th> Mobile No</th>
+           <th> Email address:</th>
+           <th> Select Identity Card</th>
+           <th> Select District</th>
+           <th> Thana</th>
+           <th> Address</th>
+           <th> Your complain</th>
+       </thead>
+
+        <tbody>
+         {% for c in complain %}
+             <tr>
+            <td>{{c.id}}</td>
+            <td>{{c.Complain_type}}</td>
+            <td>{{c.Complainant_name}}</td>
+            <td>{{c.Mobile_Number}}</td>
+                 <td>{{c.Email}}</td>
+            <td>{{c.National_id}}</td>
+            <td>{{c.District}}</td>
+            <td>{{c.Thana}}</td>
+            <td>{{c.Address}}</td>
+            <td>{{c.Complain_description}}</td>
+             </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 {% endblock content %}

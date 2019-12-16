@@ -5,27 +5,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
 {% block content %}
-<div>
+<center><h1>Complain</h1></center>
+<div class="container" style="width:800px; background-color:#b0d7ea; padding-top:40px">
+    <div class="form-group">
   <form action= "{% url 'userComplain' %}" method="POST">
       {% csrf_token %}
-        <div class="form-group">
-    <label for="id">Complainant id:</label>
-    <input type="text" class="form-control" name="Complain_id"  placeholder="Insert Id">
-  </div>
     <div class="form-group">
     <label for="Complain_type"> Select Types:</label>
     <select class="form-control" id="complaint_type" name="Complaint_type">
     <option>Complaint</option>
-    <option>Opinion</option> 
+    <option>Opinion</option>
     <option>Crime Information</option>
     </select>
   </div>
     <div class="form-group">
-    <label for="Name">Complainant Name:</label>
-    <input type="text" class="form-control" name="name"  placeholder="Insert name">
+    <label for="exampleInputName1">Complainant Name:</label>
+    <input type="text" class="form-control" name="name" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Insert name">
   </div>
     <div class="form-group">
     <label for="Mobile">Mobile No:</label>
@@ -35,7 +41,7 @@
     <div class="form-group">
        <label for="National_id">Select Identity Card:</label>
      <select name="identity_id" onchange='CheckColors(this.value);'>
-    <option>select id</option>  
+    <option>select id</option>
     <option value="N_id">National id</option>
     <option value="P_id">Passport id</option>
     <option value="B_id">Birth id</option>
@@ -57,7 +63,7 @@
 
  <div class="form-group">
     <label for="Thana">Thana</label>
-    <input type="text" class="form-control" name="Thana">
+    <input type="text" class="form-control" placeholder="Thana code" name="Thana">
   </div>
 <div class="form-group">
     <label for="address">Address</label>
@@ -72,8 +78,10 @@
     <label for="email">Email address:</label>
     <input type="email" class="form-control" name="email"  placeholder="Insert email">
   </div>
- <button type="submit" class="btn btn-default" name="submit" value="submit" >Submit</button>                                                                     
+
+ <button type="submit" class="btn btn-default" name="submit" value="submit" >Submit</button>
 </form>
+</div>
 </div>
 {%endblock%}
 </body>
