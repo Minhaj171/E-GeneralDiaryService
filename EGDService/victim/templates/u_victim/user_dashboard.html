@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,19 +9,25 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>  
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
  <style>
  	body{
  		  font: 18px "Montserrat", sans-serif;
-  line-height: 1.8;
-  color: #f5f6f7;
+          line-height: 1.8;
+          color: #f5f6f7;
+          background-image:
  	}
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 550px}
     
     /* Set gray background color and 100% height */
     .sidenav {
-      background-color:#B8B8B8;
+      background-color: #0d1a67;
       height: 100%;
+      width: 200px;
+      font-family: -webkit-pictograph;
+
+}
     }
         
     /* On small screens, set height to 'auto' for the grid */
@@ -33,6 +40,13 @@
     	bottom: 15px;
     	right: 115px;
     }
+
+.tdStyle
+{
+background-image:url('{{ STATIC_URL }}victim/img/BDPolice.jpg');
+background-repeat:no-repeat;
+background-size:100%;
+}
   </style>
 </head>
 <body>
@@ -40,12 +54,12 @@
     <div class="container">
         <div class="collapse navbar-collapse" id="myNavbar">
 
-        	    <img src="avatar.png" class="avatar navbar-right" style="width: 2%">
+        	    <img src="{{'static/img/avatar.png'}}" class="avatar navbar-right" style="width: 2%">
         	    <ul class="nav navbar-nav navbar-left">
         	    	<li> <a href="login.php" target="_blank">Police.bd</a></li>
         	    </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Logout</a></li>
+            <li><a href="show_log">Logout</a></li>
         </ul>
       </div>
     </div>
@@ -59,15 +73,13 @@
   
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="user_dashboard.html">Dashboard</a></li>
-        <li><a href="complain.html">Complain</a></li>
+        <li><a href="{% url 'userComplain' %}">Complain</a></li>
         <li><a href="P_Verification.html">Police Verification</a></li>
         <li><a href="#section3">inbox</a></li>
       </ul><br>
     </div>
     <br>
-    
-  
   </div>
-
+<td class="tdStyle">
 </body>
 </html>
