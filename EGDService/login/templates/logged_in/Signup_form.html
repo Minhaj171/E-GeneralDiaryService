@@ -1,0 +1,31 @@
+{% extends 'logged_in/L_base.html' %}
+{% block content %}
+
+  <div class="centered">
+    <form action="" method="POST" enctype="multipart/form-data" style="max-width:500px;margin:auto">
+      {% csrf_token %}
+  <center><h2>Sign Up</h2></center>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="username">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="psw">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-phone icon"></i>
+    <input class="input-field" type="phone" placeholder="phone" name="phone">
+  </div>
+  <button type="submit" class="btn">Sign up</button>
+</form>
+  </div>
+
+{% endblock content %}

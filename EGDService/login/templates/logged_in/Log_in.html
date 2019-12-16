@@ -1,0 +1,57 @@
+{% extends 'logged_in/L_base.html' %}
+{% block content %}
+
+  <div class="centered justify-content-center" style="max-width:400px;margin:0 auto">
+    <form action="userlogin" method="POST" class="mb-2" style="max-width:400px;">
+        {% csrf_token %}
+  <center><h2>Login</h2></center>
+      <div class="input-container">
+  	<select name="userselect" id="user_select" class="form-control mb-3" id="" required>
+						<option value="" selected disabled>-- Select User Type --</option>
+						<option value="User">User</option>
+						<option value="Police">Police</option>
+                        <option value="Admin">Admin</option>
+	</select>
+  </div>
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email" required>
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="password" required>
+  </div>
+
+  <button type="submit" class="btn btn-info">Login</button>
+</form>
+      <a href="{% url 'police_reg' %}" id="preg" class="btn btn-sm btn-success">Police Registration</a>
+       <a href="{% url 'User_registration' %}" id="ureg" class="btn btn-sm btn-warning">User Registration</a>
+       <a href="{% url 'police_reg' %}" id="areg" class="btn btn-sm btn-secondary">Admin Registration</a>
+  </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#preg').hide()
+        $('#ureg').hide()
+        $('#areg').hide()
+    })
+    $('#user_select').change(function(){
+    var val = $('#user_select').val();
+    if (val == 'Police'){
+     $('#preg').show();
+      $('#ureg').hide();
+        $('#areg').hide();
+    }else if(val == 'User'){
+     $('#ureg').show();
+      $('#preg').hide();
+       $('#areg').hide();
+    }
+    else{
+      $('#areg').show();
+       $('#preg').hide();
+        $('#ureg').hide();
+    }
+    })
+</script>
+{% endblock content %}
