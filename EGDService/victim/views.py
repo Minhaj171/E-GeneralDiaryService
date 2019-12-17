@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Complain
+from tourist.views import user_ver
 
 
 # Create your views here.
@@ -8,8 +9,8 @@ def userPage(request):
     return render(request, "user_dashboard.html")
 
 
-#def call_complain(request):
- #   return render(request, "u_victim/complain.html")
+# def call_complain(request):
+#   return render(request, "u_victim/complain.html")
 
 
 def userComplain(request):
@@ -24,3 +25,7 @@ def userComplain(request):
         return render(request, "u_victim/complain.html")
     else:
         return render(request, "u_victim/complain.html")
+
+
+def user_verr(request):
+    return redirect(user_ver)

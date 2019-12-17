@@ -17,7 +17,7 @@ def User_registration(request):
         user_create = user_reg.objects.create(user_name=request.POST['username'], user_phone=request.POST['phone'],
                                               user_email=request.POST['email'], user_password=request.POST['psw'])
         user_create.save()
-        return render(request, 'user_dashboard.html')
+        return render(request, 'logged_in/Log_in.html')
     else:
         return render(request, 'logged_in/Signup_form.html')
 

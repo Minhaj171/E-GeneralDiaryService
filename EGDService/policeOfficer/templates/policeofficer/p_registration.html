@@ -1,7 +1,8 @@
 {% extends 'policeofficer/base.html' %}
 {% block content %}
+<div class="container" style="width:800px; background-color:#b0d7ea;padding-top:60px">
 <div class="registration">
-    <h3>Police Registration</h3>
+   <center><h3>Police Registration</h3></center>
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
          <div class="form-group">
@@ -19,7 +20,7 @@
         <div class="form-group">
             <input type="text" class="form-control" name="thana" placeholder="Enter thana code" required>
         </div>
-        <input type="submit" class="btn btn-sm btn-success" value="Sign Up">
+        <center><input type="submit" class="btn btn-sm btn-success" style="width:150px" value="Sign Up"></center>
     </form>
     <div>
         {% if messages %}
@@ -30,5 +31,6 @@
         {% endfor %}
         {% endif %}
     </div>
+</div>
 </div>
 {% endblock content %}

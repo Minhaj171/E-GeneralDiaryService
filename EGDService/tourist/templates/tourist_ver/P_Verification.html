@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+{% extends 'tourist_ver/T_vase.html' %}
 {% block content %}
+<center><h1 style="font-size: 36px; font-family: -webkit-body;">Police Verification</h1></center>
+<div class="container" style="width:800px; background-color:#b0d7ea;padding-top:25px">
 <div>
-	<form action= "{% url 'police_verification' %}" method="POST">
+	<form action= "{% url 'police_verification' %}" method="POST"  enctype="multipart/form-data">
         {% csrf_token %}
     <div class="form-group">
     <label for="Name">Tourist Name:</label>
@@ -37,9 +34,8 @@
     <label for="passport_id">Passport_id</label>
    <input type="text" class="form-control" name="T_pid"  placeholder="Insert Passport id">
   </div>
- <button type="submit" class="btn btn-default" name="submit" value="submit" >Submit</button>                                                                     
+ <center><button type="submit" class="btn btn-default" name="submit" value="submit" >Submit</button></center>
 </form>
 </div>
+</div>
 {%endblock%}
-</body>
-</html>

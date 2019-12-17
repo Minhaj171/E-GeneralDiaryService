@@ -1,9 +1,11 @@
 from django.db import models
 
+
 # Create your models here.
 class adminn(models.Model):
     email = models.CharField(max_length=100, blank=False)
     password = models.CharField(max_length=10, blank=False)
+
 
 class policeComplain(models.Model):
     Complain_type = models.CharField(max_length=55)

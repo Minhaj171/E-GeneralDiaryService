@@ -16,7 +16,7 @@
 </head>
 <body>
 {% block content %}
-<center><h1>Complain</h1></center>
+<center><h1 style="font-size: 36px; font-family: -webkit-body;">Complain</h1></center>
 <div class="container" style="width:800px; background-color:#b0d7ea; padding-top:40px">
     <div class="form-group">
   <form action= "{% url 'userComplain' %}" method="POST">
@@ -78,8 +78,7 @@
     <label for="email">Email address:</label>
     <input type="email" class="form-control" name="email"  placeholder="Insert email">
   </div>
-
- <button type="submit" class="btn btn-default" name="submit" value="submit" >Submit</button>
+      <center><button type="submit" class="btn btn-default" name="submit" value="submit" >Submit</button></center>
 </form>
 </div>
 </div>

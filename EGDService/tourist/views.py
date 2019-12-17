@@ -16,5 +16,8 @@ def user_ver(request):
                                Tourist_Email=request.POST['T_email'],
                                Tourist_duration=request.POST['T_duration'],
                                Passport_id=request.POST['T_pid'])
+
         p.save()
-    return render(request, "P_Verification.html")
+        return render(request, "tourist_ver/P_Verification.html")
+    else:
+        return render(request, "tourist_ver/P_Verification.html")
