@@ -1,10 +1,11 @@
 from django.contrib import messages
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from victim.models import Complain
 
 from Administrator.models import policeComplain
 from .models import police
+from login.views import show_log
 
 
 def Show_officer_Dash(request):
@@ -31,6 +32,9 @@ def police_reg(request):
             police_create = police.objects.create(name=request.POST['pname'], email = request.POST['pemail'], password = request.POST['password'], phone = request.POST['phone'],thana = request.POST['thana'])
             police_create.save()
             messages.success(request, "Police Account Created!")
-            return  render(request, 'policeofficer/p_registration.html')
+            return  render(request, 'logged_in/Log_in.html')
     else:
         return  render(request, 'policeofficer/p_registration.html')
+
+def showwlog(request):
+    return redirect(show_log)

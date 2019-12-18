@@ -2,22 +2,16 @@
 {% block content %}
 <div id="navbar">
   <a href="#default" id="logo">Police.BD</a>
-  <div class="ladmin">
-    <label>Admin</label>
-  </div>
   <div id="navbar-right">
-    <a class="active" href="#home">Home</a>
     <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a href="#about">Logout</a>
   </div>
-</div>
-<div class="sidebar">
-  <a <i class="fa fa-fw fa-complain"></i> href="showComplain/"> Complain</a>
 </div>
 
 <div style="margin-top:280px;padding:25px 5px 2500px 1px;font-size:30px">
-  <a class="btn btn-sm btn-primary" href="showComplain/" style="vertical-align:middle">Complains</a>
-  <a class="btn btn-sm btn-primary" href="ShowVerification/" style="vertical-align:middle">Verifications requests</a>
+  <a class="btn btn-sm btn-primary" id="btnlink" href="showComplain/" style="vertical-align:middle">Complains</a>
+  <a class="btn btn-sm btn-primary" id="btnlink2" href="ShowVerification/" style="vertical-align:middle">Verifications requests</a>
+  <a class="btn btn-sm btn-primary" id="btnlink3" href="#" style="vertical-align:middle">inbox</a>
 </div>
 
 <script>
